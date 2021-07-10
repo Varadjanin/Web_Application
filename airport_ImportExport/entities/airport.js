@@ -26,7 +26,7 @@ class Airport {
             `;
       this.listOfFlights.forEach((flight) => {
 		  result += flight.getData();
-		  return count;
+		  return result;
 	  });
     }
   }
