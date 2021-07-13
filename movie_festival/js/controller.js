@@ -1,6 +1,13 @@
-import Movie from "./entities/movie.js";
-import Program from "./entities/program.js";
-import Festival from "./entities/festival.js";
+
+const { Movie } = require('./entities/movie');
+const { Program } = require('./entities/program');
+const { Festival } = require('./entities/festival');
+
+
+// import Movie from "./entities/movie"
+// import Program from "./entities/program"
+// import Festival from "./entities/festival"
+
 
 //setting date:
 let today = new Date();
@@ -51,7 +58,7 @@ function createMovie() {
     movieOption.innerHTML = newMovie.title;
     movieOption.setAttribute("value", index);
     dropdownMovies.appendChild(movieOption);
-    
+
 
     //clearing the fields for new inputs:
     movieTitle.value = "";
@@ -119,4 +126,3 @@ let addMovieToProgramBtn = document.querySelector(".add_movie_to_program_button"
 createMovieBtn.addEventListener("click", createMovie);
 createProgramBtn.addEventListener("click", createProgram);
 addMovieToProgramBtn.addEventListener("click", addMovieToTheProgram); 
-

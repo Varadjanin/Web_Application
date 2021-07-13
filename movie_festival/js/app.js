@@ -1,8 +1,7 @@
-import Movie from "./entities/movie";
-import Program from "./entities/program";
-import Festival from "./entities/festival";
+const { Movie } = require("./entities/movie.js");
+const { Program } = require("./entities/program.js");
+// const { Festival } = require("./entities/festival.js");
 
- 
 
 (function() {
   
@@ -16,9 +15,15 @@ import Festival from "./entities/festival";
     program1.addMovie(movie1);
     program2.addMovie(movie2);
     program1.addMovie(movie3);
+
+    console.log(movie1);
+    console.log(program1);
     console.log(program1.getData());
     
   } catch (e) {
     console.log(`Error: ${e.message}`);
   }
 })();
+
+
+

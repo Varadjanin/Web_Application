@@ -1,6 +1,5 @@
 
 
-
 class Movie{
     constructor(title, length, genre) {
         if (!title) {
@@ -12,9 +11,7 @@ class Movie{
         if (typeof length === "string") {
             throw new Error('The length of the movie should be a number.');
         }
-        if (!genre) {
-            throw new Error('Field Genre is required');
-        }
+        
         this.title = title;
         this.genre = genre;
         this.length = length;
@@ -23,6 +20,6 @@ class Movie{
     getData() {
         return `${this.title}, ${this.length}min, ${this.genreShort}`;
     };
-};
+  };
 
-export default Movie;
+  module.exports = {Movie};
