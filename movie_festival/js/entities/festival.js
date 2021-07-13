@@ -7,7 +7,7 @@ class Festival{
     };
 };
 
-module.exports = {Festival};
+export default Festival;
 
 
 

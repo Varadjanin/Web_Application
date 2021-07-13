@@ -1,5 +1,6 @@
 
-const {Movie} = require("./movie");
+import Movie from "../entities/movie.js"
+
 
 class Program{
     constructor(date) {
@@ -46,5 +47,5 @@ class Program{
 };
 
 
-module.exports = {Program};
+export default Program;
 
