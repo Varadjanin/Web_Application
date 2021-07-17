@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+button {
+    position: absolute;
+    background:#27a7b8;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    top: 150px;
+}
+button:hover {
+    background: #134d55;
+}
+button:active {
+    background: #27a7b8;
+}
+p#joke-text {
+    border-radius: 5px;
+    border: 2px solid #19636d;
+    padding: 30px;
+    margin: 150px auto;
+    max-width: 400px;
+    color: #fff;
+    background-color: #27a7b8;
+}
+.error {
+    color: red;
+}
+
+body {
+    position: relative;
+    background-image: url('https://i.pinimg.com/originals/7f/5e/44/7f5e440b085fe89a95c8cd8e61dbd19a.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
