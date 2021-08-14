@@ -7,6 +7,7 @@ $(document).ready(() => {
    paging(num,1);
 })
 
+
 function fillPageWithCards(pageNum) {    
     $.ajax({
         url: "https://rickandmortyapi.com/api/character/?page=" + pageNum,
@@ -19,7 +20,7 @@ function fillPageWithCards(pageNum) {
         }
         else {      
         response.results.forEach(function (item) {
-            var card = $(`<div class='col-4 mt-5' >
+            var card = $(`<div class='col-3 mt-5' >
                             <div class= 'card card-show'>
                                 <img src='${item.image}'>
                                 <div class='card-body'>
@@ -55,9 +56,7 @@ const paging = (totalNumOfPages, currentPage) => {
         afterCurrentPage <= totalNumOfPages;
     }
 
-    //if (currentPage > 1) {
-        pagingLi += `<li class="prev" onclick="paging(${totalNumOfPages}, ${currentPage - 1})">Prev</li>`
-    //}
+    pagingLi += `<li class="prev" onclick="paging(${totalNumOfPages}, ${currentPage - 1})">Prev</li>`
 
     for (let pageNumber = beforeCurrentPage; pageNumber <= afterCurrentPage; pageNumber++) {
         if (currentPage === pageNumber) {
@@ -69,9 +68,8 @@ const paging = (totalNumOfPages, currentPage) => {
         pagingLi += `<li class="number ${activeLi}" onclick="paging(${totalNumOfPages}, ${pageNumber})">${pageNumber}</li>`
     }
 
-    //if (currentPage < totalNumOfPages) {
-        pagingLi += `<li class="next" onclick="paging(${totalNumOfPages}, ${currentPage + 1})">Next</li>`;
-   // }
+    pagingLi += `<li class="next" onclick="paging(${totalNumOfPages}, ${currentPage + 1})">Next</li>`;
+
     pagingUl.innerHTML = pagingLi;
 }
 
@@ -84,25 +82,47 @@ const showCharacterInfo = (id) => {
         url:`${url1}${id}`,
         method:"GET",
     }).done((response) => {
+        $(".pagination").attr("class", "disabled");
         cardDiv.html("");
-        let info = `<div class="col-6">
-        <img src="${response.image}">
-      </div>
-      <div class="col-6">
-        <h2>ID: ${response.id}</h2>
-        <h2>Name: ${response.name}</h2>
-        <h2>Status:${response.status} </h2>
-        <h2>Species:${response.species} </h2>
-        <h2>Type: ${response.type}</h2>
-        <h2>Gender:${response.gender} </h2>
-        <h2>Origin:${response.origin.name} </h2>
-        <h2>Location: ${response.location.name}</h2>
-        <h2>Episode: </h2>
-        <h2>URL:${response.url} </h2>
-        <h2>Created: ${response.created}</h2>
-      </div>`;
+
+        let info = `
+        <div class="backButton">
+            <a href="http://127.0.0.1:5500/Web_Application/rickAndMorty/index.html">Back to List</a>
+            <br><br>
+        </div>
+        <div class="col-4">
+            <img src="${response.image}">
+        </div>
+        <div class="col-6 imgOpacity">
+            <h2>Name: ${response.name}</h2>
+            <h2>Status:${response.status} </h2>
+            <h2>Species:${response.species} </h2>
+            <h2>Type: ${response.type}</h2>
+            <h2>Gender:${response.gender} </h2>
+            <h2>Origin:${response.origin.name} </h2>
+            <h2>Location: ${response.location.name}</h2>
+            <h2>Episode: </h2>
+            <h2>${response.url} </h2>
+        </div>`;
         cardDiv.append(info);
     }).fail(() => {
         alert('Network error');
     });
 };
+
+
+// function goBack() {
+//   window.history.back();
+// };
+
+/* <button onclick="goBack()">Go Back</button> */
+
+
+
+// let likeBtn = document.querySelector(".likeBtn");
+// console.log(likeBtn);
+
+
+// likeBtn.onclick = function () {
+//     likeBtn.classList.toggle("likedBtn");
+// };

@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body{
+    background-image: url("./poster.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
     
 .pagination ul {
     display: flex;
@@ -35,4 +42,46 @@
 
 .active {
     background-color: rgb(212, 203, 117);
+}
+
+.disabled {
+    display: none;
+}
+
+.card-body{
+    background-color: #1D0841;
+}
+.card-title{
+    color:greenyellow;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.backButton a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:greenyellow;
+}
+
+.backButton{
+    margin-top: 10px;
+}
+
+.likedBtn{
+    background-color: yellowgreen;
+    border: solid rgb(50, 78, 9) 1px;
+}
+
+h2 {
+    color: greenyellow;
+    font-size: 20px;
+}
+
+.imgOpacity {
+    background-color: #1D0841;
+    opacity: 65%;
+    padding: 30px;
+    width: 700px;
 }

@@ -1,0 +1,13 @@
+
+
+.UsersC__cards {
+    display: flex;
+    padding: 5px 10px;
+    width: 300px;
+    margin: 5px 15px;
+}
+
+.disapear{
+    display: none;
+}
+
