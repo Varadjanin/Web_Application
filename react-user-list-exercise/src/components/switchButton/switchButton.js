@@ -1,7 +1,5 @@
 import { useState } from "react";
 import "../switchButton/switchButton.css";
-// import { UsersC } from "../usersCards/usersC/usersC";
-// import { UsersG } from "../usersGrid/usersG/usersG";
 
 const SwitchButton = (props) => {
     const [selected, setSelected] = useState(false);

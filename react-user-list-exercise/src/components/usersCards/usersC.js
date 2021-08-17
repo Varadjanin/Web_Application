@@ -1,9 +1,7 @@
 import React from 'react';
-import  {data}  from "../../usersData/randomUsers";
-//import {RandomUsers} from "../UsersData/RandomUsers"
-//import {data} from "../UsersData/RandomUsers";
+import  {data}  from "../usersData/randomUsers";
 import { User } from './userC';
-import '../usersC/usersC.css';
+import '../usersCards/usersC.css';
 
 const UsersC = () => {
     return (
@@ -13,7 +11,7 @@ const UsersC = () => {
                 key={person.login.uuid}
                 img={person.picture.thumbnail}
                 name={person.name.first}
-                email={person.email}
+                email={(person.email).slice(0,3)+"...@"+((person.email).split("@"))[1]}
                 dob={person.dob.date} />)}
         </div>
     )

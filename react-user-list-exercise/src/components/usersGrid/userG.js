@@ -1,6 +1,6 @@
   
 import React from 'react';
-import '../usersG/userG.css';
+import '../usersGrid/userG.css';
 import PropTypes from 'prop-types';
 
 const User = (props) => {

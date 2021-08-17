@@ -1,6 +1,6 @@
   
 import React from 'react';
-import '../usersC/userC.css';
+import '../usersCards/userC.css';
 
 const User = (props) => {
     return (
