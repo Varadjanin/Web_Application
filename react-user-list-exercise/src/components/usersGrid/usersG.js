@@ -1,5 +1,5 @@
 import React from 'react';
-import  {data}  from "../usersData/randomUsers";
+import  { data }  from "../usersData/randomUsers";
 import { User } from '../usersGrid/userG';
 import '../usersGrid/usersG.css';
 

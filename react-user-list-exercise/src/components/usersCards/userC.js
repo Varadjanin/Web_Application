@@ -3,6 +3,10 @@ import React from 'react';
 import '../usersCards/userC.css';
 
 const User = (props) => {
+    let day = new Date(props.dob).getDate();
+    let month = new Date(props.dob).getMonth() + 1;
+    let year = new Date(props.dob).getFullYear();
+    let dob = `${day}-${month}-${year}`;
     return (
 
         <div className='UserC__wrapper'>
@@ -12,7 +16,7 @@ const User = (props) => {
             </div>
             <div className='UserC__info'>
                 <p>Email:{props.email}</p>
-                <p>DOB:{props.dob}</p>
+                <p>DOB:{dob}</p>
             </div>
         </div>
 
